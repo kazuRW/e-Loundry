@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Pelajari lebih lanjut
+          Lihat selengkapnya
         </a>
       </header>
     </div>
