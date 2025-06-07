@@ -1,0 +1,19 @@
+{
+    "Settings": {
+      "dbConfig": {
+        "host": "prod-db-host.example.com",
+        "user": "prod_user",
+        "password": "prod_password",
+        "database": "myapp_db_prod"
+      },
+      "site": {
+        "url": "https://www.myproductiondomain.com",
+        "featureFlag": false
+      },
+      "api": {
+        "url": "https://www.myproductiondomain.com/api",
+        "featureFlag": false
+      }
+    }
+  }
+  

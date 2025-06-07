@@ -1,0 +1,15 @@
+{
+    "Settings": {
+      "dbConfig": {
+        "database": "e-myapp_db_dev"
+      },
+      "site": {
+        "featureFlag": true
+      },
+      "api": {
+        "url": "http://localhost:3030",
+        "featureFlag": false
+      }
+    }
+  }
+  
