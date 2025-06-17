@@ -4,8 +4,9 @@
   text-align: center;
 }
 
+/* Base logo style - will be overridden for nav bar specifically */
 .App-logo {
-  height: 40px; /* Diubah agar lebih sesuai untuk navigasi bar */
+  height: 40vmin; /* Original size for the main header logo (if any) */
   pointer-events: none;
 }
 
@@ -17,54 +18,55 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: auto; /* Changed to auto, as nav bar and main content define height */
   display: flex;
-  flex-direction: column; /* Tetap column agar konten di bawah nav bar */
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Ubah ini agar konten dimulai dari atas */
+  justify-content: flex-start; /* Ensure content starts from the top */
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%; /* Ensure header takes full width */
+  box-sizing: border-box; /* Include padding/border in element's total width/height */
 }
 
 /* --- Navigation Bar Styles --- */
 .App-nav {
   width: 100%;
-  background-color: #20232a; /* Warna latar belakang navigasi yang sedikit berbeda */
+  background-color: #20232a; /* Slightly different background for nav */
   padding: 15px 20px;
   display: flex;
-  justify-content: space-between; /* Untuk menempatkan logo di kiri dan tautan di kanan */
+  justify-content: space-between; /* Logo on left, links on right */
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Efek bayangan */
-  margin-bottom: 20px; /* Beri sedikit jarak antara nav bar dan konten di bawahnya */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  margin-bottom: 20px; /* Space between nav bar and content below */
 }
 
-.App-nav .App-logo { /* Jika logo ingin berbeda ukuran di nav bar */
-  height: 40px; /* Sesuaikan ukuran logo di nav bar */
+.App-nav .App-logo { /* Specific size for the logo within the nav bar */
+  height: 40px; /* Adjust logo size in nav bar */
 }
 
 .nav-links {
-  list-style: none; /* Menghilangkan bullet point */
+  list-style: none; /* Remove bullet points */
   margin: 0;
   padding: 0;
-  display: flex; /* Untuk menempatkan tautan secara horizontal */
+  display: flex; /* Display links horizontally */
 }
 
 .nav-links li {
-  margin-left: 25px; /* Jarak antar tautan */
+  margin-left: 25px; /* Spacing between links */
 }
 
 .nav-links a {
   color: white;
-  text-decoration: none; /* Menghilangkan garis bawah */
+  text-decoration: none; /* Remove underline */
   font-weight: bold;
-  transition: color 0.3s ease; /* Efek hover */
+  transition: color 0.3s ease; /* Smooth hover effect */
 }
 
 .nav-links a:hover {
-  color: #61dafb; /* Warna saat di-hover */
+  color: #61dafb; /* Color on hover */
 }
 /* --- End Navigation Bar Styles --- */
-
 
 .App-link {
   color: #61dafb;
@@ -77,4 +79,75 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* --- Carousel and Main Content Styles --- */
+.App-main-content {
+  padding: 20px;
+  max-width: 1200px; /* Limit main content width */
+  margin: 0 auto; /* Center the main content */
+}
+
+.carousel-container {
+  width: 80%; /* Adjust carousel width */
+  max-width: 900px; /* Max width for the carousel */
+  margin: 40px auto; /* Center carousel and add margin */
+  border-radius: 8px;
+  overflow: hidden; /* Ensure images stay within bounds */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel .legend {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Features section styles */
+.features-section {
+  margin-top: 50px;
+  text-align: left;
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.features-section h2 {
+  color: #282c34;
+  margin-bottom: 20px;
+}
+
+.features-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.features-section li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Basic footer style */
+.App-footer {
+  background-color: #20232a;
+  color: white;
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%;
+  box-sizing: border-box;
 }
