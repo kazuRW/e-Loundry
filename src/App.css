@@ -1,9 +1,11 @@
+/* App.css */
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 40px; /* Diubah agar lebih sesuai untuk navigasi bar */
   pointer-events: none;
 }
 
@@ -17,12 +19,52 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Tetap column agar konten di bawah nav bar */
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Ubah ini agar konten dimulai dari atas */
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/* --- Navigation Bar Styles --- */
+.App-nav {
+  width: 100%;
+  background-color: #20232a; /* Warna latar belakang navigasi yang sedikit berbeda */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* Untuk menempatkan logo di kiri dan tautan di kanan */
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  margin-bottom: 20px; /* Beri sedikit jarak antara nav bar dan konten di bawahnya */
+}
+
+.App-nav .App-logo { /* Jika logo ingin berbeda ukuran di nav bar */
+  height: 40px; /* Sesuaikan ukuran logo di nav bar */
+}
+
+.nav-links {
+  list-style: none; /* Menghilangkan bullet point */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Untuk menempatkan tautan secara horizontal */
+}
+
+.nav-links li {
+  margin-left: 25px; /* Jarak antar tautan */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none; /* Menghilangkan garis bawah */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Efek hover */
+}
+
+.nav-links a:hover {
+  color: #61dafb; /* Warna saat di-hover */
+}
+/* --- End Navigation Bar Styles --- */
+
 
 .App-link {
   color: #61dafb;
