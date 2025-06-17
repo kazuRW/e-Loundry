@@ -5,7 +5,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* Navigation Bar */}
+        <nav className="App-nav">
+          <img src={logo} className="App-logo" alt="logo" />
+          <ul className="nav-links">
+            <li><a href="/">Beranda</a></li>
+            <li><a href="/layanan">Layanan</a></li>
+            <li><a href="/tentang">Tentang Kami</a></li>
+            <li><a href="/kontak">Kontak</a></li>
+          </ul>
+        </nav>
+
+        {/* Konten Utama Header */}
         <p>
           Selamat datang di aplikasi e-loundry.
         </p>
